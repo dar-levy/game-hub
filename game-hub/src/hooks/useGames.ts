@@ -15,7 +15,7 @@ export interface Game {
 }
 
 const useGames = () => {
-  return useData("/games");
+  return useData<Game>("/games");
 };
 
 export default useGames;
