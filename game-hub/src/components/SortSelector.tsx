@@ -4,9 +4,10 @@ import React from "react";
 
 interface Props {
   onSelectSortOrder: (sortOrder: string) => void;
+  sortOrder: string;
 }
 
-const SortSelector = ({ onSelectSortOrder }: Props) => {
+const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
   const sortOrders = [
     {
       value: "",
@@ -34,10 +35,13 @@ const SortSelector = ({ onSelectSortOrder }: Props) => {
     },
   ];
 
+  const currentSortOrder = sortOrders.find(
+    (order) => order.value === sortOrder
+  );
   return (
     <Menu>
       <MenuButton as={Button} rightIcon={<BsChevronDown />}>
-        Order by: Relevance
+        Order by: {currentSortOrder?.label || "Relevance"}
       </MenuButton>
       <MenuList>
         {sortOrders.map((order) => (
