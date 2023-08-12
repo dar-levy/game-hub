@@ -4,7 +4,9 @@ import React from "react";
 import getCroppedImageUrl from "../services/image-url";
 
 const GenreList = () => {
-  const { data, isLoading } = useGenres();
+  const { data, error, isLoading } = useGenres();
+
+  if (error) return null;
 
   if (isLoading) return <Spinner />;
 
