@@ -10,7 +10,7 @@ import { Platform } from "./hooks/usePlatforms";
 import SortSelector from "./components/SortSelector";
 import GameHeading from "./components/GameHeading";
 
-export interface GameQuery {
+interface GameQuery {
   genreId?: number;
   platformId?: number;
   sortOrder: string;
