@@ -1,15 +1,23 @@
-# GameHub
+# Game Hub
 
-GameHub is a video game discovery web app that helps you find new and interesting games to play. With GameHub, you can search for games by platform, genre, and more.
+Welcome to the Game Hub! This web application is built using **React** and provides a smooth and interactive experience for browsing games, filtering them by various criteria, and accessing game details and media. The app is optimized to minimize client-side overload and enhance the user experience.
 
+## Features
 
-## Getting Started
+- **Infinite Scroll**: Browse through an extensive list of games with infinite scrolling, ensuring smooth loading without overloading the client.
+- **Optimized Game Card Display**: Games are displayed dynamically based on the viewport size, helping to minimize unnecessary resource usage and optimizing performance.
+- **Search and Filter**: Users can search for games by name or description, filter them by platform, and reorder the results based on different criteria such as popularity or release date.
+- **Game Details and Media**: Each game card routes to a detailed page containing game information, images, and trailers, providing a comprehensive view of the game.
 
-To get started with GameHub, follow these steps:
+## Data Source
 
-1. Clone this repository to your local machine.
-2. Run `npm install` to install the required dependencies.
-3. Get a RAWG API key at [https://rawg.io/apidocs](https://rawg.io/apidocs). You'll have to create an account first.
-4. Add the API key to `src/services/api-client.ts`.
-5. Run `npm run dev` to start the web server.
+All game data is fetched from a free backend vendor using an API key. The vendor supplies the game information, images, and trailers that power the Game Hub.
+
+## Caching
+
+The app utilizes **React Query** to cache game data and minimize redundant API calls, ensuring faster load times and an optimized user experience.
+
+## Deployment
+
+The site is deployed on **Vercel**. You can visit it here: [Game Hub on Vercel](https://game-mgqc4ecbr-darlevys-projects.vercel.app/)
 
